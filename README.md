@@ -11,7 +11,10 @@ Star Trek imdb ratings for all tv series, collected early 2014.  *
 
 A lot of f*$%ing stars.  *
 
-Yearly crime data since 1992 from the FBI website.  100% reflective of reality.
+Yearly crime data since 1992 from the FBI website. 
 
+Quarterly U.S. Consumer Price Index.
+
+Amish settlements 1700s to Current. *
 
 \* means there is an associated visualization in the visuals repo
