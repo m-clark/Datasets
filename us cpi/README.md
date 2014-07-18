@@ -1,0 +1,4 @@
+U.S. Consumer Price Index
+=======
+
+Regards inflation based on the U.S. consumer price index (infl =  400*log(cpi_t/cpi_{t-1})), from the second quarter of 1947 to the second quarter of 2011 (used in Statistical Computation and Modeling 2014, chap 11).  I will eventually post a stochastic volatility model up the misc code repo that uses it.  You can download such data directly from the mess that is bureau of labor website ![](http://www.bls.gov/cpi/), more easily from one of the federal reserve sites, or with other related data from Shiller's site ![](http://www.econ.yale.edu/~shiller/data.htm).
