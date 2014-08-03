@@ -17,6 +17,6 @@ Quarterly U.S. Consumer Price Index.
 
 Amish settlements 1700s to Current. *
 
-Rollcall data for all legislatures.
+Rollcall data for all U.S. legislatures.
 
 \* means there is an associated visualization in the visuals repo
