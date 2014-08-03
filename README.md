@@ -9,12 +9,14 @@ Major League Soccer salaries and attendance through 2013.  *
 
 Star Trek imdb ratings for all tv series, collected early 2014.  *
 
-A lot of f*$%ing stars.  *
+My God, it's full of...  *
 
 Yearly crime data since 1992 from the FBI website. 
 
 Quarterly U.S. Consumer Price Index.
 
 Amish settlements 1700s to Current. *
+
+Rollcall data for all legislatures.
 
 \* means there is an associated visualization in the visuals repo
