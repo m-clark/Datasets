@@ -1,0 +1,40 @@
+---
+title: "Crime rates in the US"
+output: html_document
+---
+
+Yearly crime counts from fbi ![](http://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2012/crime-in-the-u.s.-2012/tables/1tabledatadecoverviewpdf).  While it's a nice time series to play with, in the end it is based on local data and so is more of a trend of reporting practices than actual crime.
+
+
+```{r setup, include=FALSE}
+### data from http://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2011/crime-in-the-u.s.-2011/tables/table-1
+
+crime = read.csv('../Datasets/crimeratesUS/crimerates.csv')
+
+
+summary(crime)
+crimeRates = crime[, colnames(crime)[grep('rate', colnames(crime))]]
+crimeTotals = crime[, colnames(crime)[-grep('rate', colnames(crime))]]
+
+crimeRates[,c('Year', 'Population')] = crimeTotals[,c('Year', 'Population')]
+
+summary(crimeRates)
+summary(crimeTotals)
+
+library(ggplot2); library(reshape2); library(scales)
+gTot = melt(crimeTotals[,-2], id=c('Year'))
+gRate = melt(crimeRates[,-ncol(crimeRates)], id=c('Year'))
+
+ggplot(aes(x=Year, y=log(value), color=variable, group=variable), data=gTot) +
+  geom_point() +
+  geom_line(alpha=.5) +
+  labs(x='Log Total', title='') +
+  lazerhawk::theme_trueMinimal()
+
+
+ggplot(aes(x=Year, y=value, color=variable, group=variable), data=gRate) +
+  geom_point() +
+  geom_line(alpha=.5) +
+  labs(x='Log Total', title='') +
+  lazerhawk::theme_trueMinimal()
+```
